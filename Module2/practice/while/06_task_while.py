@@ -16,4 +16,22 @@
 # 220 284
 # 284 220
 
-# TODO: your code here
+num = int(input("Введите целое i: "))
+iter_num = 1
+
+while iter_num <= num:
+    iter_2 = 1
+    sum1 = 0
+    while iter_2 < iter_num:
+        if iter_num % iter_2 == 0:
+            sum1 += iter_2
+        iter_2 += 1
+    iter_2 = 1
+    sum2 = 0
+    while iter_2 < sum1:
+        if sum1 % iter_2 == 0:
+            sum2 += iter_2
+        iter_2 += 1
+    if sum2 == iter_num and sum1 == iter_2 and iter_num != iter_2:
+        print(iter_num, iter_2)
+    iter_num += 1
