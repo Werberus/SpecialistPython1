@@ -14,3 +14,15 @@
 #    #
 #    #
 ######
+
+side = int(input("сторона квадрата: "))
+i = 0
+
+while i < side:
+    str_1 = ""
+    if i == 0 or i == side - 1:
+        str_1 = "#" * side
+    else:
+        str_1 = "#" + " " * (side - 2) + "#"
+    print(str_1)
+    i += 1
