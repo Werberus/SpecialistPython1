@@ -9,4 +9,10 @@
 # 123
 # 1234
 
-# TODO: your code here
+end_num = int(input("Введите i: "))
+start_num = 1
+out = ""
+while start_num <= end_num:
+    out += str(start_num)
+    print(out)
+    start_num += 1
