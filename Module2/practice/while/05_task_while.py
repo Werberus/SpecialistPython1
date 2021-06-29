@@ -17,4 +17,23 @@
 # #
 
 
-# TODO: your code here
+side = int(input("сторона квадрата: "))
+iter_1 = 0
+iter_2 = side-1
+iter_3 = 0
+
+while iter_3 < side:
+    iter_4 = 0
+    str_1 = ""
+    while iter_4 < side:
+        if iter_1 == iter_4:
+            str_1 += "#"
+        elif iter_2 == iter_4:
+            str_1 += "#"
+        else:
+            str_1 += " "
+        iter_4 += 1
+    print(str_1)
+    iter_1 += 1
+    iter_2 -= 1
+    iter_3 += 1
