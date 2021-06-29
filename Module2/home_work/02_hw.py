@@ -7,4 +7,14 @@
 # коров, корова или коровы
 # Например, 1 корова, 2 коровы, 5 коров, 125 коров.
 
-# TODO: your code here
+while True:
+    cow_count = int(input("Введите количество коров: "))
+    cow = ""
+    print(cow_count % 10)
+    if cow_count % 10 == 0 or 5 <= cow_count % 10 <= 9 or 11 <= cow_count <= 14:
+        cow = "коров"
+    elif 2 <= cow_count % 10 <= 4:
+        cow = "коровы"
+    elif cow_count % 10 == 1:
+        cow = "корова"
+    print("На лугу пасется", cow_count, cow)
