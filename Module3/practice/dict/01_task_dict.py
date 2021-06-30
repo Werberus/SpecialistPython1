@@ -7,4 +7,4 @@
 item = {"name": "Кроссовки", "price": "7540.5", "currency": "rub", "count": "10"}
 dollar_rate = 74.12
 
-# TODO: your code here
+print(f"Цена в долларах: {round(float(item.get('price'))/dollar_rate*int(item.get('count')),2)}")
