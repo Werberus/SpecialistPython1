@@ -4,6 +4,10 @@
 keys = ['name', 'surname', 'age', 'rate']
 values = ['Петр', 'Первый', 42, 1300]
 
-# TODO: your code here
+dic = {}
+for key, val in zip(keys, values):
+    dic[key] = val
+print(dic)
+
 # Нужно получить словарь:
 # {'name': 'Петр', 'surname': 'Первый', 'age': 42, 'rate': 1300}
