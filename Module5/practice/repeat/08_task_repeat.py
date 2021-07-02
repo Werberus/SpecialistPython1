@@ -1,5 +1,15 @@
-# Вы решили сделать вклад в банк некоторой суммы на n лет.
-# Банк вам предложил x% годовых с расчетом по простым процентам или
-# y% годовых по сложным % с периодом капитализации 1 месяц.
-# При заданных процентных ставках, определите какой из вкладов вам выгоднее на 5 лет.
-# Примечание: формулы расчета простых и сложных процентов ищите на гуглодиске в папке с материалами.
+def simple_percent(v, p, n):
+    return round(v*(1+p*n/100), 2)
+
+def hard_percent(v, p, n):
+    return round(v*(1+p/100/12)**(12*n), 2)
+
+
+def lucky_percent(money, first_pc, second_pc, deposit_age):
+    if simple_percent(money, first_pc, deposit_age) < hard_percent(money, second_pc, deposit_age):
+        return "сложные"
+    else:
+        return "простые"
+
+
+print(f" Выгоднее вклад использующий {lucky_percent(100, 8, 6, 8)} проценты")
